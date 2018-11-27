@@ -1,7 +1,7 @@
 ---
 title: "English Word lengths"
 author: "Jenny Bryan, modified by Javier Castillo-Arnemann"
-date: "26 November, 2018"
+date: "27 November, 2018"
 output:
   html_document:
     keep_md: yes
@@ -19,7 +19,7 @@ Here is a histogram of word lengths.
 
 ![*Fig. 1* A histogram of English word lengths](histogram.png)
 
-###My additions
+###My additions (Javier)
 Analyzing the `words.txt` file, we computed how many words start with every letter, and obtained the following table: 
 
 

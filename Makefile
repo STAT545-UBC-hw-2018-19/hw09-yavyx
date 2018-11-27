@@ -1,21 +1,23 @@
-all: report.html letter_count.tsv organize
+all: report.html first_last_report.html organize
 
 clean:
-	rm -f words.txt histogram.tsv histogram.png report.md report.html letter_count.tsv letter_count.png
-	rm -r data figures results reports scripts
-# rm -f figures data 
+	rm -r data figures results reports 
 
 organize:
 	mkdir data
-	mkdir scripts
 	mkdir figures
 	mkdir results
 	mkdir reports
 	mv words.txt data
-	mv histogram.r letter_count.r scripts
 	mv histogram.png letter_count.png figures
-	mv histogram.tsv letter_count.tsv results
-	mv report.md report.html report.rmd reports
+	mv histogram.tsv letter_count.tsv first_last.tsv results
+	mv report.md report.html first_last_report.md first_last_report.html reports
+
+first_last_report.html: first_last_report.rmd first_last.tsv
+	Rscript -e 'rmarkdown::render("$<")'
+	
+first_last.tsv: scripts/first_last.r words.txt
+	Rscript $<
 
 report.html: report.rmd histogram.tsv histogram.png letter_count.tsv letter_count.png
 	Rscript -e 'rmarkdown::render("$<")'
@@ -24,16 +26,12 @@ histogram.png: histogram.tsv
 	Rscript -e 'library(ggplot2); qplot(Length, Freq, data=read.delim("$<")); ggsave("$@")'
 	rm Rplots.pdf
 
-histogram.tsv: histogram.r words.txt
+histogram.tsv: scripts/histogram.r words.txt
 	Rscript $<
 	
-letter_count.tsv: letter_count.r words.txt
+letter_count.tsv: scripts/letter_count.r words.txt
 	Rscript $<
 	rm Rplots.pdf
-
-#letter_count.png: letter_count.r words.txt
-#	Rscript $<
-#	rm Rplots.pdf
 
 words.txt: /usr/share/dict/words
 	cp $< $@

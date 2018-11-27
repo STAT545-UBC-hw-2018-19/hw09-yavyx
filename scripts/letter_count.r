@@ -1,4 +1,4 @@
-library(tidyverse)
+suppressPackageStartupMessages(library(tidyverse))
 
 #Count how many words there are for every letter
 words <- readLines("words.txt")

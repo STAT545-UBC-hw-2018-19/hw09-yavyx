@@ -1,0 +1,24 @@
+---
+title: "First and Last Letter Combinations"
+author: "Javier Castillo-Arnemann"
+output:
+  html_document:
+    keep_md: yes
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+library(tidyverse)
+first_last <- read_tsv("first_last.tsv")
+```
+
+Let's quickly see which start-end letter combinations are the most common:
+
+```{r}
+first_last %>%
+  head(15) %>%
+  knitr::kable(col.names = c("Start-End", "Number of words"),
+               align = "c")
+```
+
+We can see that most of the common combinations end with `s`!
