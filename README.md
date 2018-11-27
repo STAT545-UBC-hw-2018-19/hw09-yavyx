@@ -17,6 +17,9 @@ The objective of this assignment is to add new instructions to the `Makefile` in
 
 As usual, `all` runs the whole pipeline and `clean` removes all the output. The two `.rmd` files aren't moved to the `reports` directory to avoid working directory issues when re-running the pipeline.
 
+##Pipeline Graph
+!(https://github.com/STAT545-UBC-students/hw09-yavyx/blob/master/h09_pipeline.png)
+
 ##Resources
 
 - [Automating Data-analysis Pipelines](http://stat545.com/automation04_make-activity.html)
