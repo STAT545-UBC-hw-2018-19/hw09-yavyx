@@ -20,7 +20,7 @@ As usual, `all` runs the whole pipeline and `clean` removes all the output. The 
 
 ## Pipeline Graph
 
-!(https://github.com/STAT545-UBC-students/hw09-yavyx/blob/master/h09_pipeline.png)
+![graph](https://github.com/STAT545-UBC-students/hw09-yavyx/blob/master/h09_pipeline.png)
 
 ## Resources
 
