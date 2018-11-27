@@ -14,7 +14,7 @@ The objective of this assignment is to add new instructions to the `Makefile` in
 - `report.html`: part of the original repo, but updated to include the letter count analysis. 
 - `first_last.tsv`: outputs a `.tsv` file that stores the most common start-end letter combinations.
 - `first_last_report.html`: generates a report with the information from `first_last.csv`.
-- `organize`: creates directories and moves the relevant file to their corresponing directory.
+- `organize`: creates directories and moves the relevant files to their corresponing directory.
 
 As usual, `all` runs the whole pipeline and `clean` removes all the output. The two `.rmd` files aren't moved to the `reports` directory to avoid working directory issues when re-running the pipeline.
 
