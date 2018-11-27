@@ -1,6 +1,6 @@
 ---
 title: "English Word lengths"
-author: "Jenny Bryan"
+author: "Jenny Bryan, modified by Javier Castillo-Arnemann"
 date: "`r format(Sys.time(), '%d %B, %Y')`"
 output:
   html_document:
@@ -20,3 +20,15 @@ The most frequent word length is `r with(hist_dat, Length[which.max(Freq)])`.
 Here is a histogram of word lengths.
 
 ![*Fig. 1* A histogram of English word lengths](histogram.png)
+
+###My additions
+Analyzing the `words.txt` file, we computed how many words start with every letter, and obtained the following table: 
+
+```{r load-table}
+letter_counts <- readr::read_tsv("letter_count.tsv")
+knitr::kable(letter_counts)
+```
+
+We also visualized the data so we can get a better idea of how the words are distributed.
+
+![*Fig. 2* A bar plot of English words per letter](letter_count.png)
