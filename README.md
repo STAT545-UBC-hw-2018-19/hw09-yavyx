@@ -18,6 +18,10 @@ The objective of this assignment is to add new instructions to the `Makefile` in
 
 As usual, `all` runs the whole pipeline and `clean` removes all the output. The two `.rmd` files aren't moved to the `reports` directory to avoid working directory issues when re-running the pipeline.
 
+The `html` reports don't render properly in Github, so click the following links to see them:
+- [`first_last_report.html`](http://htmlpreview.github.io/?https://github.com/STAT545-UBC-students/hw09-yavyx/blob/master/reports/first_last_report.html)
+- [`report.html`](http://htmlpreview.github.io/?https://github.com/STAT545-UBC-students/hw09-yavyx/blob/master/reports/report.html)
+
 ## Pipeline Graph
 
 ![graph](https://github.com/STAT545-UBC-students/hw09-yavyx/blob/master/h09_pipeline.png)
